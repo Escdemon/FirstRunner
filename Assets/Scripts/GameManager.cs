@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour {
 
 	public GameObject pauseButton;
 
+	public GameObject background; 
+
 	// Use this for initialization
 	void Start () {
 		platformStartPoint = platformGenerator.position;
@@ -60,6 +62,8 @@ public class GameManager : MonoBehaviour {
 		scoreManager.scoreIncreasing = true;
 
 		powerupReset = true;
+
+		background.GetComponent<BackgroundController>().reset (); 
 	}
 
 	/*public IEnumerator RestartGameCo () {
