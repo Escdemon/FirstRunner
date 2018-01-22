@@ -43,20 +43,20 @@ public class BackgroundController : MonoBehaviour {
 
 		// Loops on background objects for re-use
 		foreach (GameObject sky in skyObjects) { 
-			if (player.transform.position.x > sky.transform.position.x + skyWidth*1.5) {
+			if (player.transform.position.x > sky.transform.position.x + skyWidth) {
 				sky.transform.position = new Vector3(sky.transform.position.x + (2 * skyWidth), sky.transform.position.y, sky.transform.position.z); 
 			}
 		}
 
 		foreach (GameObject hill in hillsBackObjects) { 
-			if (player.transform.position.x > hill.transform.position.x + hillWidth*1.5) {
+			if (player.transform.position.x > hill.transform.position.x + hillWidth) {
 				hill.transform.position = new Vector3(hill.transform.position.x + (3 * hillWidth), hill.transform.position.y, hill.transform.position.z); 
 			}
 		}
 
 
 		foreach (GameObject hill in hillsFrontObjects) { 
-			if (player.transform.position.x > hill.transform.position.x + hillWidth*1.5) {
+			if (player.transform.position.x > hill.transform.position.x + hillWidth) {
 				hill.transform.position = new Vector3(hill.transform.position.x + (3 * hillWidth), hill.transform.position.y, hill.transform.position.z); 
 			}
 		}
